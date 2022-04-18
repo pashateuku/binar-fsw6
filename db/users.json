@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "email": "abcd1@binar.com",
+      "password": "passpertama"
+    },
+    {
+      "id": 2,
+      "email": "defg2@binar.com",
+      "password": "passkedua"
+    }
+]

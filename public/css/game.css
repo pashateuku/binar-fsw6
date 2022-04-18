@@ -1,0 +1,177 @@
+
+/* Untuk Liat layout sementara */
+/* * {
+    outline: 1px solid red;
+} */
+
+/* Background */
+
+.game-section {
+    background: #9C835F;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Navigation */
+
+.nav-is-flex {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+}
+
+.nav-is-flex a {
+    text-decoration: none;
+}
+
+.nav-button-n-logo {
+    height: 55px;
+    /* margin: 5px; */
+    /* background-color: red; */
+}
+
+.nav-back-button {
+    font-family: 'Open Sans' ;
+    font-weight: 700;
+    font-size: 48px;   
+    color: #724C21;
+
+    width: 82.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* text-align: center;
+    top: 10%; */
+}
+
+.nav-logo {
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 90%;
+}
+
+.nav-name {
+    font-family: 'Open Sans' ;
+    font-weight: 700;
+    font-size: 24px;
+    color: #F9B23D;
+
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+}
+
+/* Content */
+
+.content {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.player {
+    font-family: 'Open Sans' ;
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+
+    text-align: center;
+}
+
+.vs-style {
+    font-family: 'Open Sans' ;
+    font-weight: 700;
+    font-size: 96px;
+    color: #BD0000;
+    margin: 0;
+    letter-spacing: 0.1em;
+    line-height: 15vh;
+    
+    text-align: center;
+}
+
+.player-status {
+    font-family: 'Open Sans' ;
+    font-weight: 700;
+    font-size: 30px;
+    background: #4C9654;
+    color: white;
+    margin: 0;
+    letter-spacing: 0.1em;
+    line-height: 10vh;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    transform: rotate(-30deg);
+}
+
+.draw {
+    font-family: 'Open Sans' ;
+    font-weight: 700;
+    font-size: 30px;
+    background: #035B0C;
+    color: white;
+    margin: 0;
+    letter-spacing: 0.1em;
+    line-height: 10vh;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    transform: rotate(-30deg);
+}
+
+.hand-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand-img {
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 17.5vh;
+    align-items: center;
+}
+
+.hand-img-hover:hover {
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 17.5vh;
+    align-items: center;
+
+    background: #C4C4C4;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.hand-img-choose {
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 17.5vh;
+    align-items: center;
+
+    background: #C4C4C4;
+    border-radius: 15px;
+}
+
+.enemy-hand-img {
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 17.5vh;
+    align-items: center;
+}
+
+.reset-img {
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 17.5vh;
+    align-items: center;
+}
