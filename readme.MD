@@ -1,18 +1,18 @@
 
-# Binar FSW Challenge - Chapter 5. Perancangan Web API
+# (ON GOING) Binar FSW Challenge - Chapter 6. Penggunaan Database Management System
 
 ## Deskripsi
 
-Repository ini ditujukan untuk melengkapi tugas yang diberikan oleh Binar berupa **Penerapan Perancangan Web API**
+Repository ini ditujukan untuk melengkapi tugas yang diberikan oleh Binar berupa **Penggunaan Database Management System**
 
 ## Cara Menjalankan
 1. Clone repository ini
 ```
-git clone https://github.com/pashateuku/binar-fsw5.git
+git clone https://github.com/pashateuku/binar-fsw6.git
 ```
 2. Masuk ke direktori 
 ```
-cd binar-fsw5
+cd binar-fsw6
 ```
 3.  Buat file  `.env`  dengan isi sesuai contoh (lihat  `.env.example`)
 4.  Install modules yang diperlukan
