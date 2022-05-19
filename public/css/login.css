@@ -1,0 +1,138 @@
+/* Untuk Liat layout sementara */
+/* * {
+    outline: 1px solid red;
+} */
+
+/* SECTION */
+.hero-image {
+    /* display: flex; */
+    justify-content: center;
+    background-image: url('/img/press-quotes.jpg') ;
+    background-color: black;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* 2 COLUMN */
+.row-manual {
+    height: 75vh;
+    font-family: "Open Sans";
+}
+
+.col-manual {
+    height: 75vh;
+    padding: 7vh;
+}
+
+/* FORM COLUMN */
+
+.col-left {
+    padding-right: 2.5vh;
+}
+
+.col-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+    height: 65vh;
+    border-radius: 2vh;
+    padding: 7vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-box h4 {
+    text-align: center;
+    margin-bottom: 7%;
+    font-weight: bold;
+    color: #2B365A;
+}
+
+.form-group {
+    width: 90%;
+    margin: 2% 0 2% 0 ;
+    outline: #F5F5F5;
+}
+
+.form-control {
+    border: 1px solid #ffffff !important;
+    font-weight: bold;
+}
+
+.col-box a {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    color: #a8adb8 !important;
+}
+
+.col-box a:hover {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    color: #696B71 !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.parent-submit {
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-img { 
+    background-color: #FFB548;
+
+    display: flex;
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 2vh;
+    align-items: center;
+}
+
+.submit-img:hover { 
+    background-color: #ed8e00;
+    transition: 0.3s;
+    cursor: pointer;
+
+    display: flex;
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 2vh;
+    align-items: center;
+}
+
+
+.hand-img {
+    height: 7vh;
+    align-items: center;
+}
+
+/* CAPTION COLUMN */
+
+.col-right {
+    padding-left: 2.5vh;
+    color: white;
+}
+
+.col-right h4 {
+    font-weight: bold;
+}
+
+.col-right h1 {
+    font-weight: bold;
+    font-size: 4rem;
+}
+

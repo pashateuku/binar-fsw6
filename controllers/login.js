@@ -1,9 +1,11 @@
 // import json data user statis
 const usersData = require('../db/users.json');
 
-// controller untuk login method GET (sementara hanya utk mengarahkan menggunakan POSTMAN untuk login)
+// controller untuk login method GET
 function loginGet(req, res) {
-    res.status(200).json({ message: 'login page now on development, please use POSTMAN with POST method for login' });
+    res.status(200)
+    // .json({ message: 'login page now on development, please use POSTMAN with POST method for login' }); // login message bahwa login page belum selesai
+    return res.render('login.ejs');
 }
 
 // controller untuk login 
