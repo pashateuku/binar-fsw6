@@ -29,8 +29,8 @@
 
 /* FORM COLUMN */
 
-.col-left {
-    padding-right: 2.5vh;
+.col-right {
+    padding-left: 2.5vh;
 }
 
 .col-box {
@@ -92,8 +92,8 @@
 
 .submit-img { 
     background-color: #FFB548;
-    border: 0;
 
+    border: 0;
     display: flex;
     padding: 1.5vh;
     margin: 1vh;
@@ -107,16 +107,12 @@
     background-color: #ed8e00;
     transition: 0.3s;
     cursor: pointer;
-
-    display: flex;
-    padding: 1.5vh;
-    margin: 1vh;
-    height: 10vh;
-    width: 10vh;
-    border-radius: 2vh;
-    align-items: center;
+    border: 0;
 }
 
+.submit-img:visited { 
+    border: 3% white;
+}
 
 .hand-img {
     height: 7vh;
@@ -125,21 +121,22 @@
 
 /* CAPTION COLUMN */
 
-.col-right {
-    padding-left: 2.5vh;
+.col-left {
+    padding-right: 2.5vh;
     color: white;
+    font-family: "Open Sans";
 }
 
-.col-right h4 {
+.col-left h4 {
     font-weight: bold;
 }
 
-.col-right h1 {
+.col-left h1 {
     font-weight: bold;
     font-size: 4rem;
 }
 
-.col-right a {
+.col-left a {
     color: #A8ABB2 !important;
 }
 

@@ -6,6 +6,7 @@ const router = express.Router();
 const homeController = require('./controllers/home.js');
 const gameController = require('./controllers/game.js');
 const loginController = require('./controllers/login.js');
+const registerController = require('./controllers/register.js');
 const usersController = require('./controllers/users.js');
 
 // routing
@@ -15,6 +16,9 @@ router.get('/game', gameController);
 
 router.get('/login', loginController.loginGet);
 router.post('/login', loginController.loginPost);
+
+router.get('/register', registerController.registerGet);
+// pasang router post register disini
 
 router.get('/users', usersController.users);
 router.get('/users/:id', usersController.usersById);
