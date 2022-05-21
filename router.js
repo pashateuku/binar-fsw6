@@ -16,6 +16,8 @@ router.get('/game', gameController);
 
 router.get('/login', loginController.loginGet);
 router.post('/login', loginController.loginPost);
+router.get('/admin', loginController.loginGetAdmin);
+router.post('/admin', loginController.loginPostAdmin);
 
 router.get('/register', registerController.registerGet);
 router.post('/register', registerController.registerPost);

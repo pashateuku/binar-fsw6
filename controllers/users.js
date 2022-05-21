@@ -1,5 +1,5 @@
 // import json data user statis
-const usersData = require('../db/users.json')
+const usersData = require('../db/admin.json')
 
 // controller untuk show all data user statis 
 function users(req, res) {

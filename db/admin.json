@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "email": "admin1@binar.com",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "email": "admin2@binar.com",
+      "password": "admin"
+    }
+]
