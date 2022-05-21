@@ -1,5 +1,6 @@
 // import json data user statis
 const usersData = require('../db/users.json');
+const { user_game, user_game_biodata } = require('../models');
 
 // controller untuk login method GET
 function registerGet(req, res) {
@@ -7,6 +8,51 @@ function registerGet(req, res) {
     // .json({ message: 'login page now on development, please use POSTMAN with POST method for login' }); // login message bahwa login page belum selesai
     return res.render('register.ejs');
 }
+
+// controller untuk register
+function registerPost(req,res) {
+    user_game.create({
+        email: req.body.email,
+        password: req.body.password,
+        user_game_biodatum: {
+          fullname: req.body.fullname,
+          phone: req.body.phone
+        }
+      }, {
+        include: {
+          model: user_game_biodata,
+        }
+      })
+      .then(()=> {
+        res.send('Akun berhasil dibuat')
+      })
+      .catch(err => {
+        res.status(422).json("Can't create article", err)
+      })    
+}
+
+// // controller untuk register
+// function registerPost(req,res) {
+//     user_game.create({
+//         email: req.body.email,
+//         password: req.body.password
+//       })
+//       .then(()=> {
+//         res.send('Akun berhasil dibuat')
+//       })    
+// }
+
+// controller untuk register
+// function registerPost(req,res) {
+//     user_game_biodata.create({
+//         phone: req.body.phone,
+//         fullname: req.body.fullname,
+//         id_foreign: req.body.password
+//       })
+//       .then(()=> {
+//         res.send('Akun berhasil dibuat')
+//       })    
+// }
 
 // controller untuk register 
 // function loginPost(req, res) {
@@ -29,5 +75,5 @@ function registerGet(req, res) {
 
 // export controllers
 module.exports = {
-    registerGet
+    registerGet, registerPost
 };

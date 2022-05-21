@@ -18,7 +18,7 @@ router.get('/login', loginController.loginGet);
 router.post('/login', loginController.loginPost);
 
 router.get('/register', registerController.registerGet);
-// pasang router post register disini
+router.post('/register', registerController.registerPost);
 
 router.get('/users', usersController.users);
 router.get('/users/:id', usersController.usersById);
