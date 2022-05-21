@@ -1,6 +1,6 @@
 // import json data user statis
 const adminUser = require('../db/admin.json');
-const { user_game, user_game_biodata } = require('../models');
+const { user_game } = require('../models');
 
 // controller untuk login method GET untuk user
 function loginGet(req, res) {
@@ -8,24 +8,33 @@ function loginGet(req, res) {
     return res.render('login.ejs');
 }
 
-// controller untuk login 
-function loginPost(req, res) {
+// controller untuk login method POST untuk user (cek email dan pass)
+async function loginPost(req, res) {
+    
+    const email = req.body.email;
+    const password = req.body.password;
+  
+    // mengecek jika email ada di dalam tabel user
+    const userData = await user_game.findOne({
+      where: {
+        email: email,
+      },
+    });
+  
+    if (!userData) { // dilanjutkan mengecek email, apabila email tidak ditemukan maka:
+      return res.status(401).json({
+        message: 'Email tidak terdaftar di DB',
+      });
+    }
 
-    const inputEmail = req.body.email;
-    const inputPassword = req.body.password;
+    if (userData.password !== password) { // dilanjutkan mengecek password, apabila password pada email yg digunakan salah maka:
+      return res.status(401).json({
+        message: 'Password salah di DB',
+      });
+    }
 
-    const findDataIndex = usersData.findIndex((element) => element.email == inputEmail);
-
-    if (findDataIndex == -1) { // apabila hasil findIndex adalah -1, maka data sesuai syarat tidak ditemukan
-        res.status(403).json({ message: 'Email is not registered' });
-    } else { // apabila data ditemukan dan--
-            if (usersData[findDataIndex].password != inputPassword) { // password salah
-                res.status(403).json({ message: 'Wrong Password' });
-            } else { // password sesuai
-                res.status(200).json({ message: 'Login successful' });
-            };            
-    };
-};
+    return res.status(200).redirect('/game'); // apabila pass sesuai maka login berhasil dan redirect ke game
+}
 
 // controller untuk login method GET untuk admin
 function loginGetAdmin(req, res) {
@@ -33,7 +42,7 @@ function loginGetAdmin(req, res) {
     return res.render('login_admin.ejs');
 }
 
-// controller untuk login admin
+// controller untuk login method GET untuk admin (cek email dan pass)
 function loginPostAdmin(req, res) {
 
     const inputEmail = req.body.email;
