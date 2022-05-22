@@ -31,7 +31,16 @@
                 <!-- div untuk form -->
                 <div class="col col-manual col-right">
                     <form class="col col-box" method="POST" action="/register">
-                        <h4>Register</h4> 
+                        <h4>Register</h4>
+                        
+                        <% if(failed) { %>
+                        <a class="failed-status">Failed to create new account,<br>please try again</a>
+                        <% } %>
+
+                        <% if(success) { %>
+                        <a class="success-status">Your account is created!<br>please login with link below</a>
+                        <% } %>
+
                         <div class="form-group form-manual">
                             <input type="text" name="fullname" class="form-control" placeholder="Full Name">
                         </div>
@@ -49,7 +58,7 @@
                                 <img class="hand-img" src="/img/arrow-right.png" alt="">
                             </button>
                         </div>
-                        <a href="/login">I HAVE ACCOUNT</a> 
+                        <a class="login-button" href="/login">I HAVE ACCOUNT</a> 
                     </form>
                 </div>
             </div>     

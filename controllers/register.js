@@ -4,7 +4,9 @@ const { user_game, user_game_biodata } = require('../models');
 // controller untuk login method GET
 function registerGet(req, res) {
     res.status(200)
-    return res.render('register.ejs');
+    return res.render('register.ejs', {
+          success : 0, failed : 0
+        });
 }
 
 // controller untuk register
@@ -22,10 +24,14 @@ function registerPost(req,res) {
         }
       })
       .then(()=> {
-        res.send('Akun berhasil dibuat')
+        res.render('register', { 
+          success : 1, failed :  0
+        })
       })
       .catch(() => {
-        res.status(422).send('Terjadi kesalahan, mohon mengisi form kembali dengan lengkap')
+        res.render('register', { 
+          success : 0, failed :  1
+        })
       })    
 }
 
