@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | All Users</title>
+</head>
+<body>
+    <body>
+        <div>
+          <h1><%= userData.email %></h1>
+          <p><%= userData.password %></p>
+          <!-- <a href="/delete/<%=userData.id %>">Baca lebih lanjut!</a> -->
+        </div>
+
+        <% if(userBiodata) { %>
+          <% userBiodata.forEach(i => { %>
+            <div>
+              <h3><%= i.fullname %></h1>
+              <h4><%= i.phone %></p>
+              <!-- <a href="/articles/<%= i.id %>">Baca lebih lanjut!</a> -->
+            </div>
+          <% }) %>
+        <% } %>
+</body>
+</html>

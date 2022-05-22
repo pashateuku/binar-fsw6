@@ -8,6 +8,7 @@ const gameController = require('./controllers/game.js');
 const loginController = require('./controllers/login.js');
 const registerController = require('./controllers/register.js');
 const usersController = require('./controllers/users.js');
+const dashboardController = require('./controllers/dashboard.js');
 
 // routing
 router.get('/', homeController);
@@ -21,6 +22,9 @@ router.post('/admin', loginController.loginPostAdmin);
 
 router.get('/register', registerController.registerGet);
 router.post('/register', registerController.registerPost);
+
+router.get('/dashboard/users', dashboardController.dashboardAllUser);
+router.get('/dashboard/users/:id', dashboardController.dashboardUserBiodata);
 
 router.get('/users', usersController.users);
 router.get('/users/:id', usersController.usersById);
