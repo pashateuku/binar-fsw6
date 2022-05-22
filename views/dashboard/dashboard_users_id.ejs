@@ -11,7 +11,7 @@
         <div>
           <h1><%= userData.email %></h1>
           <p><%= userData.password %></p>
-          <!-- <a href="/delete/<%=userData.id %>">Baca lebih lanjut!</a> -->
+          <a href="/dashboard/users/delete/<%=userData.id %>">Hapus User ini beserta seluruh datanya</a>
         </div>
 
         <% if(userBiodata) { %>

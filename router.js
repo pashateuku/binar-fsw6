@@ -26,6 +26,7 @@ router.post('/register', registerController.registerPost);
 router.get('/dashboard/users', dashboardController.dashboardAllUser);
 router.get('/dashboard/users/:id', dashboardController.dashboardUserBiodata);
 router.get('/dashboard/users/delete_bio/:id', dashboardController.deleteUserBiodata);
+router.get('/dashboard/users/delete/:id', dashboardController.deleteUser);
 
 
 router.get('/users', usersController.users);

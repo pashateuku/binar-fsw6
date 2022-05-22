@@ -33,15 +33,27 @@ async function dashboardUserBiodata(req, res) {
 
 // DELETE user_game_biodata
 function deleteUserBiodata(req, res) {
-  user_game_biodata.destroy({
-      where: { id: req.params.id }
-      })
-      .then(()=> {
-      res.send('Artikel berhasil dihapus')
-      })
-  }
+    user_game_biodata.destroy({
+        where: { id: req.params.id }
+        })
+        .then(()=> {
+        res.send('Biodata berhasil dihapus')
+        })
+    }
 
 // DELETE user_game sekaligus dengan biodata nya (belum termasuk history)
+function deleteUser(req, res) {
+    
+    user_game_biodata.destroy({
+        where: { id_foreign: req.params.id }
+        })
+    
+    user_game.destroy({
+        where: { id: req.params.id }
+        })
+    
+    return res.send('User beserta semua Biodata nya berhasil dihapus')
+    }
 
 // UPDATE user_game
 
@@ -49,5 +61,5 @@ function deleteUserBiodata(req, res) {
 
 // export controllers
 module.exports = {
-    dashboardAllUser, dashboardUserBiodata, deleteUserBiodata
+    dashboardAllUser, dashboardUserBiodata, deleteUserBiodata, deleteUser
 };
