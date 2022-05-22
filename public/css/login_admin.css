@@ -62,26 +62,11 @@
     font-weight: bold;
 }
 
-.col-box a {
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.failed-status {
+    margin-bottom: 3%;
+    color: #ff462d !important;
     text-decoration: none;
-
-    color: #a8adb8 !important;
-}
-
-.col-box a:hover {
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
     text-align: center;
-    text-decoration: none;
-    
-    color: #696B71 !important;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .parent-submit {

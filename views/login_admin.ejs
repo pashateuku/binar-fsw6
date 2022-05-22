@@ -25,11 +25,20 @@
                 <div class="col col-manual col-left">
                     <form class="col col-box" method="POST" action="/admin">
                         <h4>Admin Login</h4> 
+                        
+                        <% if(failed == 1) { %>
+                        <a class="failed-status">Email not found</a>
+                        <% } %>
+    
+                        <% if(failed == 2) { %>
+                        <a class="failed-status">Wrong password</a>
+                        <% } %>
+
                         <div class="form-group form-manual">
-                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                         </div>
                         <div class="form-group form-manual">
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
                         </div>
                         <div class="parent-submit">
                             <button type="submit" class="submit-img">
