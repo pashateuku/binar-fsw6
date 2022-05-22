@@ -9,7 +9,9 @@ const { user_game } = require('../models');
 // controller untuk login method GET untuk user
 function loginGet(req, res) {
     res.status(200)
-    return res.render('login.ejs');
+    return res.render('login.ejs', {
+      failed : 0
+    });
 }
 
 // controller untuk login method POST untuk user (cek email dan pass)
@@ -26,14 +28,15 @@ async function loginPost(req, res) {
     });
   
     if (!userData) { // dilanjutkan mengecek email, apabila email tidak ditemukan maka:
-      return res.status(401).json({
-        message: 'Email tidak terdaftar di DB',
+      return res.render('login.ejs', {
+        failed : 1
       });
+
     }
 
     if (userData.password !== password) { // dilanjutkan mengecek password, apabila password pada email yg digunakan salah maka:
-      return res.status(401).json({
-        message: 'Password salah di DB',
+      return res.render('login.ejs', {
+        failed : 2
       });
     }
 

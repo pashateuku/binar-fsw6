@@ -37,7 +37,6 @@
     display: flex;
     flex-direction: column;
     background-color: #F5F5F5;
-    height: 65vh;
     border-radius: 2vh;
     padding: 7vh;
     align-items: center;
@@ -62,7 +61,7 @@
     font-weight: bold;
 }
 
-.col-box a {
+.link-style {
     margin-top: 3%;
     display: flex;
     justify-content: center;
@@ -72,7 +71,7 @@
     color: #a8adb8 !important;
 }
 
-.col-box a:hover {
+.link-style:hover {
     margin-top: 3%;
     display: flex;
     justify-content: center;
@@ -82,6 +81,13 @@
     color: #696B71 !important;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.failed-status {
+    margin-bottom: 3%;
+    color: #ff462d !important;
+    text-decoration: none;
+    text-align: center;
 }
 
 .parent-submit {
