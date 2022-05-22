@@ -56,10 +56,67 @@ function deleteUser(req, res) {
     }
 
 // UPDATE user_game
+// menampilkan form update
+function updateForm(req, res) {
+  user_game.findOne({
+    where: { id: req.params.id }
+  })
+    .then(user_game => {
+    res.render('dashboard/dashboard_update', { 
+      user_game
+    })
+    })
+  }
+
+// POST untuk perbarui user_game by id
+function updateUser(req, res) {
+  user_game.update({
+    email: req.body.email,
+    password: req.body.password
+  }, {
+    where: { id: req.params.id }
+  })
+    .then(()=> {
+      res.send('game_user berhasil diupdate')
+    })
+ }
+
 
 // UPDATE user_game_biodata
+function updateFormBiodata(req, res) {
+  user_game_biodata.findOne({
+    where: { id: req.params.id }
+  })
+    .then(user_game_biodata => {
+    res.render('dashboard/dashboard_update_bio', { 
+      user_game_biodata
+    })
+    })
+  }
+
+// POST untuk perbarui user_game by id
+function updateUserBiodata(req, res) {
+  user_game_biodata.update({
+    fullname: req.body.fullname,
+    phone: req.body.phone
+  }, {
+    where: { id: req.params.id }
+  })
+    .then(()=> {
+      res.send('user_game_biodata berhasil diupdate')
+    })
+ }
 
 // export controllers
 module.exports = {
-    dashboardAllUser, dashboardUserBiodata, deleteUserBiodata, deleteUser
+    dashboardAllUser, 
+    dashboardUserBiodata, 
+    
+    deleteUserBiodata, 
+    deleteUser, 
+    
+    updateForm, 
+    updateUser,
+    updateFormBiodata,
+    updateUserBiodata,
 };

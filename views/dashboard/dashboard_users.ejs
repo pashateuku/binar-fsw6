@@ -13,6 +13,8 @@
             <h1><%= i.email %></h1>
             <p><%= i.password %></p>
             <a href="/dashboard/users/<%= i.id %>">Lihat Semua Biodata User</a>
+            <a href="/dashboard/users/update/<%= i.id %>">Update Email dan Password</a>
+            <a href="/dashboard/users/delete/<%= i.id %>">Hapus User</a>
           </div>
         <% }) %>
 </body>

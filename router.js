@@ -20,13 +20,21 @@ router.post('/login', loginController.loginPost);
 router.get('/admin', loginController.loginGetAdmin);
 router.post('/admin', loginController.loginPostAdmin);
 
+
 router.get('/register', registerController.registerGet);
 router.post('/register', registerController.registerPost);
 
+
 router.get('/dashboard/users', dashboardController.dashboardAllUser);
 router.get('/dashboard/users/:id', dashboardController.dashboardUserBiodata);
+
 router.get('/dashboard/users/delete_bio/:id', dashboardController.deleteUserBiodata);
 router.get('/dashboard/users/delete/:id', dashboardController.deleteUser);
+
+router.get('/dashboard/users/update/:id', dashboardController.updateForm);
+router.post('/dashboard/users/update/:id', dashboardController.updateUser);
+router.get('/dashboard/users/update_bio/:id', dashboardController.updateFormBiodata);
+router.post('/dashboard/users/update_bio/:id', dashboardController.updateUserBiodata);
 
 
 router.get('/users', usersController.users);

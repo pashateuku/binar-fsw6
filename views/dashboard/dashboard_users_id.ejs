@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | All Users</title>
+    <title>Dashboard | User Data</title>
 </head>
 <body>
     <body>
         <div>
           <h1><%= userData.email %></h1>
           <p><%= userData.password %></p>
+          <a href="/dashboard/users/update/<%= userData.id %>">Update Email dan Password</a>
           <a href="/dashboard/users/delete/<%=userData.id %>">Hapus User ini beserta seluruh datanya</a>
         </div>
 
@@ -19,6 +20,7 @@
             <div>
               <h3><%= i.fullname %></h1>
               <h4><%= i.phone %></p>
+              <a href="/dashboard/users/update_bio/<%= i.id %>">Update Biodata</a>
               <a href="/dashboard/users/delete_bio/<%= i.id %>">Hapus Biodata ini</a>
             </div>
           <% }) %>
