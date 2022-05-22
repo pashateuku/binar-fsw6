@@ -1,6 +1,10 @@
-// import json data user statis
+// import json data user statis untuk login admin
 const adminUser = require('../db/admin.json');
+// import data user pada database untuk login user
 const { user_game } = require('../models');
+
+
+// CONTROLLER LOGIN UNTUK USER
 
 // controller untuk login method GET untuk user
 function loginGet(req, res) {
@@ -35,6 +39,9 @@ async function loginPost(req, res) {
 
     return res.status(200).redirect('/game'); // apabila pass sesuai maka login berhasil dan redirect ke game
 }
+
+
+// CONTROLLER LOGIN UNTUK ADMIN
 
 // controller untuk login method GET untuk admin
 function loginGetAdmin(req, res) {

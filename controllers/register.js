@@ -1,5 +1,4 @@
-// import json data user statis
-const usersData = require('../db/admin.json');
+// import data user pada database untuk register user (add data)
 const { user_game, user_game_biodata } = require('../models');
 
 // controller untuk login method GET
