@@ -54,6 +54,12 @@
     font-weight: bold;
 }
 
+.form-group-dash {
+    width: 50%;
+    margin: 2% 0 2% 0 ;
+    border: 1px solid #2b365a !important;
+}
+
 .login-button{
     margin-top: 3%;
     display: flex;
@@ -94,6 +100,11 @@
     margin-top: 7%;
     display: flex;
     justify-content: center;
+}
+
+.parent-submit-dash {
+    display: flex;
+    justify-content: left;
 }
 
 .submit-img { 
@@ -194,8 +205,12 @@
 
 .content-welcome {
     padding-right: 5vh;
-    /* height: 90vh; */
     text-align: center;
+    color: #2B365A;
+}
+
+.content-welcome h1 {
+    font-weight: 700;
 }
 
 .content-style h2{
@@ -280,4 +295,18 @@
 .button-small a {
     color: white !important;
     text-decoration: none;
+}
+
+.button-add {
+    width: 20vw;
+    margin-bottom: 2vh;
+    background-color: #004385;
+}
+
+.button-add:hover {
+    background-color: #0065cb;
+}
+
+.underline {
+    text-decoration: underline;
 }

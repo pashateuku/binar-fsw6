@@ -36,6 +36,63 @@ async function dashboardUserBiodata(req, res) {
         })
    }
 
+// GET to show create user biodata form in dashboard
+async function createFormBiodata(req, res) {
+  
+  const userData = await user_game.findOne({
+    where: {
+      id: req.params.id,
+    },
+  });
+
+    return res.status(200).render('dashboard/dashboard_create_bio.ejs', { 
+      userData
+    })    
+}
+
+// GET to show create data form in dashboard (with one biodata)
+function createForm(req, res) {
+  return res.status(200).render('dashboard/dashboard_create.ejs');
+}
+
+// POST to create user biodata in one of game user
+function createUserBiodata(req,res) {
+  user_game_biodata.create({
+      fullname: req.body.fullname,
+      phone: req.body.phone,
+      id_foreign: req.params.id  
+    })
+    .then(()=> {
+      res.send('biodata berhasil dibuat melalui DASH')
+    })
+    .catch((err) => {
+      res.send(err)
+      // console.log(err)
+      })
+    }
+
+// POST to create user (with one biodata)
+function createUser(req,res) {
+  user_game.create({
+      email: req.body.email,
+      password: req.body.password,
+      user_game_biodatum: {
+        fullname: req.body.fullname,
+        phone: req.body.phone
+      }
+    }, {
+      include: {
+        model: user_game_biodata,
+      }
+    })
+    .then(()=> {
+      res.send('akun berhasil dibuat melalui DASH')
+    })
+    .catch(() => {
+      res.send('akun GAGAL dibuat melalui DASH')
+      })
+    }
+
 // DELETE user_game_biodata
 function deleteUserBiodata(req, res) {
     user_game_biodata.destroy({
@@ -117,7 +174,12 @@ module.exports = {
     dashboard,
 
     dashboardAllUser, 
-    dashboardUserBiodata, 
+    dashboardUserBiodata,
+    
+    createForm,
+    createUser,
+    createFormBiodata,
+    createUserBiodata,
     
     deleteUserBiodata, 
     deleteUser, 

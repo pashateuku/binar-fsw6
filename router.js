@@ -30,6 +30,11 @@ router.get('/dashboard/', dashboardController.dashboard);
 router.get('/dashboard/users', dashboardController.dashboardAllUser);
 router.get('/dashboard/users/:id', dashboardController.dashboardUserBiodata);
 
+router.get('/dashboard/create', dashboardController.createForm);
+router.post('/dashboard/create', dashboardController.createUser);
+router.get('/dashboard/create/:id', dashboardController.createFormBiodata);
+router.post('/dashboard/create/:id', dashboardController.createUserBiodata);
+
 router.get('/dashboard/users/delete_bio/:id', dashboardController.deleteUserBiodata);
 router.get('/dashboard/users/delete/:id', dashboardController.deleteUser);
 
