@@ -66,7 +66,7 @@ function loginPostAdmin(req, res) {
             if (adminUser[findDataIndex].password != inputPassword) { // password salah
                 res.status(403).render('login_admin.ejs', { failed : 2 });
             } else { // password sesuai
-                res.status(200).json({ message: 'Login successful' });
+                res.status(200).redirect('/dashboard');
             };            
     };
 };

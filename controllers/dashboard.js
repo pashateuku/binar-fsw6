@@ -1,6 +1,11 @@
 // import json data user pada tabel user_game di database
 const { user_game, user_game_biodata } = require('../models');
 
+// GET to show dashboard page
+function dashboard(req, res) {
+  return res.status(200).render('dashboard/dashboard.ejs');
+}
+
 // GET all user in user_game and show it to /dashboard/users
 function dashboardAllUser(req, res) {
     user_game.findAll()
@@ -109,6 +114,8 @@ function updateUserBiodata(req, res) {
 
 // export controllers
 module.exports = {
+    dashboard,
+
     dashboardAllUser, 
     dashboardUserBiodata, 
     

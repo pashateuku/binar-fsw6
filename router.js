@@ -25,6 +25,8 @@ router.get('/register', registerController.registerGet);
 router.post('/register', registerController.registerPost);
 
 
+router.get('/dashboard/', dashboardController.dashboard);
+
 router.get('/dashboard/users', dashboardController.dashboardAllUser);
 router.get('/dashboard/users/:id', dashboardController.dashboardUserBiodata);
 
