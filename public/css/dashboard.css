@@ -200,8 +200,22 @@
 
 .content-style h2{
     font-weight: 700;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     color: #2B365A;
+}
+
+.content-desc {
+    margin-bottom: 2vh;
+    color: #2B365A;
+}
+
+.user-content {
+    font-weight: 500 !important;
+    margin-bottom: 2vh !important;
+}
+
+.user-content b {
+    text-decoration: underline;
 }
 
 .table-style {

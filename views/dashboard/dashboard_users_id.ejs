@@ -4,26 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | User Data</title>
+    <title>Register</title>
+
+    <!-- CSS Bootstrap 5.1.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Manual Styling -->
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <body>
-        <div>
-          <h1><%= userData.email %></h1>
-          <p><%= userData.password %></p>
-          <a href="/dashboard/users/update/<%= userData.id %>">Update Email dan Password</a>
-          <a href="/dashboard/users/delete/<%=userData.id %>">Hapus User ini beserta seluruh datanya</a>
-        </div>
+    <section class="hero-image d-flex align-items-center">    
+                 <div class="col-3 nav-manual">
+                     <div class="nav-box">
+                        <h4>ADMIN DASHBOARD</h4>
+                        <div class="nav-button"><a href="/dashboard/">🏠 Home</a></div>
+                        <div class="nav-button"><a href="/dashboard/users">👤 User Data</a></div>
 
-        <% if(userBiodata) { %>
-          <% userBiodata.forEach(i => { %>
-            <div>
-              <h3><%= i.fullname %></h1>
-              <h4><%= i.phone %></p>
-              <a href="/dashboard/users/update_bio/<%= i.id %>">Update Biodata</a>
-              <a href="/dashboard/users/delete_bio/<%= i.id %>">Hapus Biodata ini</a>
-            </div>
-          <% }) %>
-        <% } %>
+                     </div>
+                 </div>
+                 <div class="col content-style">
+                    <h2>User Biodata</h2>
+                    <h2 class="user-content">of <b><%= userData.email %></b></h1>
+                    <table class="table-style">
+                        <tr>
+                            <th>No.</th>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Phone Number</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                       <% if(userBiodata) { %>
+                            <% let i = 1 %> 
+                            <% userBiodata.forEach(data => { %>
+                                <tr>
+                                    <td><%= i%></td>
+                                    <td><%= data.id %></td>
+                                    <td><%= data.fullname %></td>
+                                    <td><%= data.phone %></td>
+                                    <td>
+                                        <div class="button-small">
+                                            <a href="/dashboard/users/update_bio/<%= data.id %>">Edit</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="button-small button-delete" href="/dashboard/users/delete/<%= data.id %>">
+                                            <a href="/dashboard/users/delete_bio/<%= data.id %>">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% i ++ %> 
+                            <% }) %>
+                        <% } %>
+                    </table>
+                 </div>
+    </section>
+
+    <!-- JS Bootstrap 5.1.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

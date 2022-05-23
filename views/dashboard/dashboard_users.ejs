@@ -23,13 +23,16 @@
                  <div class="col-3 nav-manual">
                      <div class="nav-box">
                         <h4>ADMIN DASHBOARD</h4>
-                        <div class="nav-button"><a href="/dashboard/">Home</a></div>
-                        <div class="nav-button"><a href="/dashboard/users">User Data</a></div>
+                        <div class="nav-button"><a href="/dashboard/">🏠 Home</a></div>
+                        <div class="nav-button"><a href="/dashboard/users">👤 User Data</a></div>
 
                      </div>
                  </div>
                  <div class="col content-style">
                     <h2>User Data</h2>
+                    <div class="content-desc">
+                        <a>press <b>Edit</b> to edit data, <b>Delete</b> to delete data, and <b>Show All Data</b> to show all biodata of the user</a>
+                    </div>
                     <table class="table-style">
                         <tr>
                             <th>No.</th>
@@ -49,7 +52,7 @@
                             <td><%= data.password %></td>
                             <td>
                                 <div class="button-small">
-                                    <a href="/dashboard/users/update/<%= data.id %>">Update</a>
+                                    <a href="/dashboard/users/update/<%= data.id %>">Edit</a>
                                 </div>
                             </td>
                             <td>
