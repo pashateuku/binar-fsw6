@@ -25,15 +25,15 @@ In progress
 | 12 |  `GET`  |  `/dashboard/users`  | Menampilkan halaman dashboard dan semua data user_game |
 | 13 |  `GET`  |  `/dashboard/users/:id`  | Menampilkan halaman dashboard dan semua data user_game_biodata yang dimiliki oleh salah satu user |
 | 14 |  `GET`  |  `/dashboard/create`  | Menampilkan form create user pada dashboard |
-| 14 |  `GET`  |  `/dashboard/create/:id`  | Menampilkan form create user's biodata pada dashboard |
-| 14 |  `POST`  |  `/dashboard/create`  |  Menambahkan data user dan 1 biodatanya pada database |
-| 14 |  `POST`  |  `/dashboard/create:id`  |  Menambahkan biodata user pada database |
-| 14 |  `GET`  |  `/dashboard/users/update/:id`  | Menampilkan form update user pada dashboard |
-| 14 |  `GET`  |  `/dashboard/users/update_bio/:id`  | Menampilkan form update biodata pada dashboard |
-| 14 |  `POST`  |  `/dashboard/users/update/:id`  |  Melakukan update data user pada database |
-| 14 |  `POST`  |  `/dashboard/users/update_bio/:id`  |  Melakukan update biodata user pada database |
-| 14 |  `GET`  |  `/dashboard/users/delete/:id`  | Menghapus data user pada database |
-| 14 |  `GET`  |  `/dashboard/users/delete_bio/:id`  | Menghapus biodata user pada database |
+| 15 |  `GET`  |  `/dashboard/create/:id`  | Menampilkan form create user's biodata pada dashboard |
+| 16 |  `POST`  |  `/dashboard/create`  |  Menambahkan data user dan 1 biodatanya pada database |
+| 17 |  `POST`  |  `/dashboard/create:id`  |  Menambahkan biodata user pada database |
+| 18 |  `GET`  |  `/dashboard/users/update/:id`  | Menampilkan form update user pada dashboard |
+| 19 |  `GET`  |  `/dashboard/users/update_bio/:id`  | Menampilkan form update biodata pada dashboard |
+| 20 |  `POST`  |  `/dashboard/users/update/:id`  |  Melakukan update data user pada database |
+| 21 |  `POST`  |  `/dashboard/users/update_bio/:id`  |  Melakukan update biodata user pada database |
+| 22 |  `GET`  |  `/dashboard/users/delete/:id`  | Menghapus data user pada database |
+| 23 |  `GET`  |  `/dashboard/users/delete_bio/:id`  | Menghapus biodata user pada database |
 
 
 
